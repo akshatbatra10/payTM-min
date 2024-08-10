@@ -7,9 +7,7 @@ const accountRouter = require("./account");
 const router = express.Router();
 
 mongoose
-  .connect(
-    "mongodb+srv://Akshat_Mystic:pD9M18fMeQOR61NV@cluster0.4qeanap.mongodb.net/Paytm"
-  )
+  .connect(process.env.DB_URL)
   .then(() => {
     console.log("Connected to MongoDB");
   })
